@@ -28,9 +28,6 @@ body{
   .calc{
     width: 100%;
   }
-  .btn{
-    font-size: 3rem;
-  }
 }
 @media screen and (min-height: 680px) {
   .calc{
