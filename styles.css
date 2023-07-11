@@ -1,0 +1,120 @@
+body{
+  background: linear-gradient(to right bottom, #9444fc, #45f6ff) no-repeat;
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  overflow-y:hidden;
+}
+.calc{
+  width: 36vw;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  border-radius: 20px;
+  background: #fffab2;
+  color: #000;
+  padding: 18px;
+  box-shadow: 4px 4px 4px #4f4f4f;
+}
+@media screen and (max-width: 900px) and (min-width: 501px){
+  .calc{
+    width: 60vw;
+  }
+  .btn{
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .calc{
+    width: 100%;
+  }
+  .btn{
+    font-size: 3rem;
+  }
+}
+@media screen and (min-height: 680px) {
+  .calc{
+    height: 680px;
+  }
+}
+
+.btn {
+  font-size: 3.5rem;
+  background: linear-gradient(to top right, #fcca84, #f8a962);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+}
+.btn:hover{
+  filter: brightness(120%);
+}
+.btn:active{
+  filter: brightness(90%);
+}
+
+.zero{
+  text-align: center;
+  grid-area: zero;
+}
+.ac{
+  font-size: 3.3rem;
+}
+.bg-dark{
+  background: linear-gradient(to top right, #ff6767, #ff2020);
+}
+.bg-blue{
+  background:linear-gradient(to top right, #f3e949, #f5ff24);
+}
+.calc-screen{
+  background-color: white;
+  border-radius: 20px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+  display: grid;
+  justify-content: end;
+}
+.calc-screen p{
+  overflow-x: auto;
+  font-size: 4em;
+
+}
+.buttons{
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "ac ac ac division"
+  "seven eight nine mult"
+  "four five six minus"
+  "one two three plus"
+  "zero zero comma is";
+}
+
+.comma{grid-area: comma}
+.is{grid-area: is}
+.ac{grid-area: ac}
+.plus{grid-area: plus}
+.minus{grid-area: minus}
+.mult{grid-area: mult}
+.six{grid-area: six}
+.four{grid-area: four}
+.five{grid-area: five}
+
+@media screen and (orientation: landscape) and (max-height: 680px){
+  .calc{
+    display: flex;
+    justify-content: space-around;
+  }
+  .buttons{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "division mult minus plus is"
+    "five six seven eight nine"
+    "zero one two three four"
+    "ac ac ac comma comma";
+  }
+ .is{
+   background: linear-gradient(to right top, #83ff55, #37a137);
+ }
+}
